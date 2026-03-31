@@ -20,13 +20,18 @@
   ],
   "scripts": {
     "build": "tsc",
-    "ci": "npm run build",
-    "format": "prettier --write ."
+    "ci": "npm run build && npm run check-forma && npm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "test":"vitest run",
+    "dev":"vitest"
   },
   "type": "module",
   "main": "dist/index.js",
   "devDependencies": {
     "prettier": "^3.8.1",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
   }
 }
+  
